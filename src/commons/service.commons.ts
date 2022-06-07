@@ -9,7 +9,7 @@ export abstract class BaseService<T>{
     }
 
     findOne(id:any):Promise<T>{
-        return this.getRepository().findOne(id);
+        return this.getRepository().findOneById(id);
     }
     create(entity:T):Promise<T>{
         return this.getRepository().save(entity);
